@@ -1,0 +1,19 @@
+#page-header .icon_home {
+    height:70%;
+}
+#page-header .icon_home img {
+    height:100%;
+}
+#page-header .icon{
+    height:70%;
+}
+#page-header #nav a:hover {
+    padding:0.3em 0.7em;
+}
+#page-header #nav a {
+    font-size:12px;
+}
+#_logout {
+    font-size:11px;
+    margin:auto;
+}

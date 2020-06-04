@@ -1,0 +1,34 @@
+.loader {
+    display:none;
+    width:calc(80% - 40px);
+    padding:10px 20px;
+    border:1px solid black;
+    margin:10px auto;
+    font-family:Raleway;
+    font-size:12px;
+}
+.loader span{
+    display:inline-block;
+    width:1em;
+    text-align:center;
+    font-weight:bold;
+    animation:infinite linear 1s blink-text;
+    color:transparent;
+}
+@keyframes blink-text {
+    30% {
+        background-color:transparent;
+        color:transparent
+    }
+    40% {
+        background-color:grey;
+        color:transparent
+    }
+    60% {
+        background-color:transparent;
+        color:grey
+    }
+    100% {
+        color:black;
+    }
+}

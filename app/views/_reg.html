@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <script src= 'res/js/check.on.rest.js'></script>
+        <title>Login | Sign Up</title>
+        <meta name= 'viewport' content= 'width=device-width,initial-scale=1.0,user-scalable=no' />
+        <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+        <link rel= 'stylesheet' type= 'text/css' href= 'res/style/login.css'>
+        <link rel= 'stylesheet' type= 'text/css' href= 'res/style/conf.css'>
+        <link rel= 'stylesheet' type= 'text/css' href= 'res/style/header.css'>
+        <link rel= 'stylesheet' type= 'text/css' media="screen and (max-width: 599px)" href= 'res/style/login-resp.css'>
+        <link rel= 'stylesheet' type= 'text/css' media= 'screen and (max-width: 599px)' href= 'res/style/header-resp.css'>
+        <script type= 'text/javascript' src= 'res/js/disableSubmit.js'></script>
+        <script type= 'text/javascript' src= 'res/js/reg.form.js'></script>
+        <script src= 'res/js/vue.js'></script>
+        <script src= 'res/js/validate.js'></script>
+        <script src= 'res/js/validator.js'></script>
+    </head>
+    <body>
+        <span id= 'form-helper' class= ''>
+            <span data-inv-icon= '&#9940;' data-val-icon= '&#9989;'></span>
+            <p></p>
+        </span>
+        <div class= 'no-space-block' id= 'page-header'>
+            <a href= '/login' class= 'icon_home'><img src= 'res/icon/icon_orig.png' /></a>
+            <div id= 'nav'>
+                <a href= '/rules'>Rules</a>
+                <a href= '/contact'>Contact</a>
+            </div>
+        </div>
+        <div class= 'cont-block' id= 'page-content'>
+            <div class= 'no-space-block' id= 'form-cont'>
+                <form id= '-signup'>
+                    <h2>Sign up</h2>
+                    <label for= '_name'><span class= 'icon'></span>Username
+                        <text-validation type= 'text' id= '_name' data-label= 'Username' rules= 'length should be between 6 and 15,can contain only letters number unserscore(_) and dollar($) sign'></text-validation>
+                    </label>
+                    <label for= '_email'><span class= 'icon' ></span>E-mail
+                        <email-validation type= 'text' id= '_email' data-label= 'E-mail' rules= 'Your e-mail is not a valid email'></email-validation>
+                    </label>
+                    <label for= '_pass'><span class= 'icon' ></span>Password
+                        <pass-validation type= 'password' id= '_pass' data-label= 'Password' rules= 'Password must be minimum characters long'></pass-validation>
+                    </label>
+                    <label for= '_dp'><span class= 'icon' ></span>Display Picture<br>
+                        <select id= '_dp' name= '_dp'>
+                            <option value= 'beardMan.webp'>Beard Man</option>
+                            <option value= 'nerdyGuy.png'>Nerd Guy</option>
+                            <option value= 'punkDude.png'>Punk Dude</option>
+                            <option value= 'shortHairFemale.png'>Short Hair Girl</option>
+                            <option value= 'longHairWomen.png'>Long Hair Women</option>
+                        </select>
+                        <img src= 'res/avs/beardMan.webp' width= '64' height= '64'>
+                        <input type= 'hidden' id= '_dp_char' name= '_dp_char' value= 'beardMan.webp'>
+                    </label>
+                    <button id= 'submit' class= 'btn btn-left' disabled>Register</button>
+                    <span class= 'small footer'>Already have an account ? <a href= '/login'>Login with old account</a></span>
+                </form>
+            </div>
+            <script>
+                // initialise vue model
+                new Vue({
+                    el: 'label[for=\'_name\']'
+                })
+                new Vue({
+                    el: 'label[for=\'_pass\']'
+                })
+                new Vue({
+                    el: 'label[for=\'_email\']'
+                })
+            </script>
+        </div>
+    </body>
+</html>

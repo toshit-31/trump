@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <script src= 'res/js/check.on.rest.js'></script>
+        <title>Login | Sign Up</title>
+        <meta name= 'viewport' content= 'width=device-width,initial-scale=1.0' />
+        <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+        <link rel= 'stylesheet' type= 'text/css' href= 'res/style/login.css'>
+        <link rel= 'stylesheet' type= 'text/css' href= 'res/style/loader.css'>
+        <link rel= 'stylesheet' type= 'text/css' media= "screen and (max-width: 599px)" href= 'res/style/login-resp.css'>
+        <link rel= 'stylesheet' type= 'text/css' href= 'res/style/header.css'>
+        <link rel= 'stylesheet' type= 'text/css' media= 'screen and (max-width: 599px)' href= 'res/style/header-resp.css'>
+        <script src= 'res/js/login.form.js'></script>
+    </head>
+    <body>
+        <div class= 'no-space-block' id= 'page-header'>
+            <img class='icon' src= 'res/icon/icon_orig.png' />
+            <div id= 'nav'>
+                <a href= '/rules'>Rules</a>
+                <a href= '/contact'>Contact</a>
+            </div>
+        </div>
+        <div class= 'cont-block' id= 'page-content'>
+            <div class= 'no-space-block' id= 'form-cont'>
+                <form id='-getin'>
+                    <h2>Login</h2>
+                    <span id= 'lr-msg'>
+                        Either the e-mail or password or both are incorrect.
+                    </span>
+                    <label for= '_user'><span class= 'icon' ></span>Email
+                        <input type= 'email' id= '_user' name= '_user' />
+                    </label>
+                    <label for= '_pass'><span class= 'icon' ></span>Password
+                        <input type= 'password' id= '_pass' name= '_pass' />
+                    </label>
+                    <button id= 'submit' class= 'btn btn-right'>Login</button>
+                    <span class= 'small footer'>Don't have an account ? <a href= '/reg'>Register</a></span>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

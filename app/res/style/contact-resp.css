@@ -1,0 +1,31 @@
+#form-cont {
+    padding:0 0.2em 0 0.5em;
+}
+h1 {
+    font-size:16px;
+}
+table {
+    font-size:12px;
+}
+#dev-prof {
+    width:100px;
+    height:100px;
+    margin-right:10px;
+}
+#nm {
+    height:50%;
+    font-size:30px;
+    vertical-align: bottom;
+}
+#em td{
+    padding:0;
+    height:10%;
+}
+#sc td{
+    padding:0;
+    height:40%;
+    vertical-align:top;
+}
+#nm #_stack {
+    display:none;
+}

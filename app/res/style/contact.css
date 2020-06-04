@@ -1,0 +1,124 @@
+html {
+    font-family:Raleway;
+}
+#form-cont {
+    padding:0 2em;
+}
+h1 {
+    font-family:Raleway;
+    padding:0.8em 0.5em;
+    font-size:24px;
+    background:linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.01));
+    border-left:3px solid black;
+}
+#dev-det {
+    font-family:Raleway;
+}
+#dev-det span {
+    font-weight:bold;
+}
+#dev-prof {
+    width:164px;
+    height:164px;
+    margin-right:50px;
+}
+#nm td:nth-child(2){
+    height:50%;
+    font-size:48px;
+    vertical-align: bottom;
+}
+#em td{
+    padding:0;
+    height:50%;
+}
+#-cont input, #-cont textarea {
+    display:block;
+    min-width:300px;
+    width:80%;
+    padding:0.8em;
+    font-size:14px;
+    border:0;
+    outline:0;
+    margin:1.5em 0;
+    font-family:Raleway;
+}
+#-cont input:focus, #-cont textarea:focus {
+    background:rgba(0, 0, 0, 0.08);
+    border-color:black;
+}
+#-cont input::placeholder, #-cont textarea::placeholder {
+    color:black;
+}
+#-cont input {
+    border-bottom:1px solid grey;
+}
+#-cont textarea {
+    height:300px;
+    border:1px solid grey;
+    resize: none;
+}
+.btn {
+    display:block;
+    width:auto;
+    height:2.5em;
+    font-family:Raleway;
+    font-weight:bold;
+    border:1px solid grey;
+    border-bottom:2px solid grey;
+    outline:none;
+    cursor:pointer;
+    background-color:rgba(150, 150, 150, 0.2);
+}
+#_smsg {
+    margin-top:2em;
+    width:100px;
+}
+.btn:hover {
+    background-color:rgba(150, 150, 150, 0.1);
+    border-bottom-color:black;
+}
+.btn:active {
+    background-color:rgba(200, 200, 200, 0.1);
+    border-bottom-width:1px;
+}
+.btn._loader::after {
+    width:1em;
+    height:1em;
+    margin-left:5px;
+    display:inline-block;
+    border-radius:50%;
+    background-color:transparent;
+    background-image:url('../images/loader.png');
+    background-size:1em 1em;
+    content:'';
+    transform-origin:50% 50%;
+    animation:infinite linear 1s rot;
+}
+@keyframes rot {
+    0% {
+        transform:rotate(0deg)
+    }
+    100% {
+        transform:rotate(360deg)
+    }
+}
+#feed {
+    width:100%;
+}
+#feed .succ, #feed .err{
+    display:block;
+    padding:2em;
+    font-size:14px;
+    font-weight:bold;
+    width:calc(80% - 4em);
+}
+#feed .succ {
+    color:green;
+    background-color:lightgreen;
+    border:2px solid green;
+}
+#feed .err {
+    color:red;
+    background-color:pink;
+    border:2px solid red;
+}

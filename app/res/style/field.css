@@ -1,0 +1,285 @@
+body, html {
+    user-select:none;
+    padding:0;
+    margin:0;
+    font-family:Raleway;
+    min-height:650px;
+    min-width:1100px;
+}
+#playground {
+    display:block;
+    width:calc(100% - 16px);
+    height:calc(100% - 16px);
+    padding:0;
+    margin:8px;
+    background-color:rgba(245, 245, 245, 1)
+}
+#playground .single {
+    display:grid;
+    column-gap: 1em;
+    padding:1em;
+    width:calc(100% - 2em);
+}
+#playground .split {
+    display:inline-block;
+}
+#playground .single#pl-top {
+    grid-template-columns: calc(100% - 200px) 200px;
+    height:calc(20% - 2em); 
+}
+#playground .single#pl-me {
+    grid-template-columns: 1fr 5fr;
+    height:calc(30% - 2em)
+}
+#playground .single.flex {
+    display:grid;
+    height:calc(50% - 2em);
+    grid-template-columns: 1fr 3fr 1fr;
+}
+.card{
+    display:inline-block;
+    height:9em;
+    width:6em;
+    font-family:Raleway;
+    border:1px solid black;
+    border-radius:5px;
+    background-color:white;
+    box-shadow:0px 0px 1px grey;
+    border-radius:2px;
+    position:relative;
+    cursor:pointer;
+    text-align:left;
+}
+.card.dis {
+    background-color:grey;
+}
+.card.s, .card.c {
+    color:black;
+}
+.card.h, .card.d {
+    color:rgb(235, 1, 1);
+}
+.card span {
+    display:block;
+    font-size:20px;
+    font-weight:bold;
+}
+.card .up, .card .down {
+    height:calc(20% - 4px);
+    padding:4px 0 0 4px;
+}
+.card .mid {
+    height:60%;
+    font-size:8em;
+    text-align:center;
+    line-height:0.55em;
+}
+.card .down {
+    transform-origin:50% 50%;
+    transform:rotate(180deg)
+}
+#_info {
+    display:inline-block;
+    margin:0;
+    padding:1em;
+    min-width:150px;
+    height:calc(100% - 2em);
+    text-align:center;
+}
+#_info img { 
+    display:block;
+    height:60%;
+    margin:0 auto 0.5em auto;
+}
+#_info span { 
+    display:block;
+    font-size:22px;
+    font-weight:bold;
+    margin:0 0 0.2em 0;
+}
+#_game-info {
+    vertical-align:middle;
+}
+#_game-info span {
+    display:block;
+    font-size:16px;
+    margin:auto 0; 
+    height:1.5em;
+}
+#_game-info #tr.r b{
+    color:red
+}
+#_game-info input {
+    display:inline-block;
+    font-size:20px;
+    font-family:Raleway;
+    background: transparent;
+    border:0;
+    outline:0;
+    width:2em;
+    height:1.5em;
+    font-weight:bold;
+}
+.timer-meter {
+    display:block;
+    max-width:150px;
+    height:0.5em;
+    padding:0;
+    margin:0 auto;
+    border:1px solid black;
+    border-radius:0.5em;
+}
+.timer-meter .fill{
+    margin:0;
+    padding:0;
+    height:100%;
+    width:100%;
+    display:block;
+    border:none;
+    border-radius:0.5em;
+    background-color:green;
+    transition:0.1s linear;
+}
+._oth._info {
+    display:grid;
+    grid-template-columns: 1fr 1.5fr;
+    max-width:220px;
+    width:100%;
+    max-height:96px;
+    height:100%;
+    padding:0;
+    margin:auto;
+}
+._oth._info img { 
+    display:inline-block;
+    height:100%;
+    max-height:96px;
+    margin:0 auto;
+}
+._oth._info p {
+    margin-left:1em;
+    display:inline-block;
+}
+#card-stack { 
+    padding:0.5em;
+    width:auto;
+    min-width:42em;
+    height:auto;
+    margin:auto;
+    display:grid;
+    grid-template-columns:3em 3em 3em 3em 3em 3em 3em 3em 3em 3em 3em 3em 3em;
+}
+#trump-sel {
+    display:grid;
+    grid-gap:2em;
+    grid-template-columns:1fr;
+    position:relative;
+    top:-100%;
+}
+#trump-sel ._suit{
+    font-size:84px;
+    padding:0;
+    cursor:pointer;
+}
+#trump-sel ._suit.h , #trump-sel ._suit.d {
+    color : red;
+}
+#trump-sel ._suit.s , #trump-sel ._suit.c {
+    color : black;
+}
+.btn {
+    display:block;
+    width:auto;
+    height:2em;
+    font-family:Raleway;
+    font-weight:bold;
+    border:1px solid grey;
+    border-bottom:2px solid grey;
+    outline:none;
+    cursor:pointer;
+    background-color:rgba(150, 150, 150, 0.2);
+}
+.btn:hover {
+    background-color:rgba(150, 150, 150, 0.1);
+    border-bottom-color:black;
+}
+.btn:active {
+    background-color:rgba(200, 200, 200, 0.1);
+    border-bottom-width:1px;
+}
+.btn#_ft {
+    margin:auto;
+    padding:0 1.5em;
+}
+#card-area {
+    display:block;
+    width:100%;
+    height:100%;
+    padding:0;
+    margin:0;
+}
+#card-area #pl-top-card, #card-area #pl-me-card, #card-area #pl-lr-card {
+    display:block;
+    max-height:33%;
+    text-align:center;
+}
+#card-area #pl-lr-card .-l, #card-area #pl-lr-card .-r {
+    display:inline-block;
+    width:45%;
+    text-align:center;
+}
+#cd-show.win-ann {
+    font-size : 20px;
+    line-height:100%;
+    font-weight: bold;
+    text-align:center;
+}
+#cd-show .card {
+    width: 4em;
+    height: 6.5em;
+    cursor:initial;
+    margin:0 auto;
+}
+#cd-show .card .up, #cd-show .card .down {
+    font-size:14px;
+}
+#cd-show .card .mid {
+    line-height:0.65em;
+    font-size:5.5em;
+}
+#vol-msg {
+    display:none;
+    position:absolute;
+    width:calc(100% - 4px);
+    padding:1.5em 0;
+    top:40%;
+    left:0;
+    border:2px solid grey;
+    text-align:center;
+    font-family:Raleway;
+    font-size:20px;
+    color:black;
+    background-color:rgb(240, 240, 240);
+    opacity:0;
+}
+#vol-msg::before {
+    display:block;
+    content:attr(data-head);
+    font-weight:bold;
+    margin: 0 auto 10px auto;
+}
+@keyframes fade-out {
+    0% {
+        opacity:0;
+    }
+    10%{
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        display:none;
+    }
+}

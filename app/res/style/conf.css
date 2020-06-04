@@ -1,0 +1,43 @@
+#msg {
+    display:block;
+    margin:5em auto;
+    width:60%;
+    height:auto;
+    border-radius:2px;
+    font-family:Raleway;
+    font-size:16px;
+    text-align:center;
+    line-height:3em;
+    border-style:solid;
+    border-width:1px;
+}
+b {
+    font-weight:bold;
+}
+.info-err {
+    background-color:rgba(255, 0, 0, 0.5);
+    box-shadow: 0 0 1px red;
+    color:red;
+    border-color:red;
+}
+.info-err b {
+    color:red;
+}
+.info-succ {
+    background-color:lightgreen;
+    box-shadow: 0 0 1px lightgreen;
+    color:green;
+    border-color:green
+}
+.info-succ b {
+    color:green;
+}
+.info-info {
+    background-color:rgba(0, 255, 255, 0.2);
+    box-shadow: 0 0 1px rgba(0, 255, 255, 0.2);
+    color:rgb(0, 69, 148);
+    border-color:rgb(0, 69, 148);
+}
+.info-info b {
+    color:rgb(0, 69, 148);
+}

@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Contact Dev</title>
+        <meta name= 'viewport' content= 'width=device-width,initial-scale=1.0' />
+        <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+        <link rel= 'stylesheet' type= 'text/css' href= 'res/style/header.css'>
+        <link rel= 'stylesheet' type= 'text/css' href= 'res/style/contact.css'>
+        <link rel= 'stylesheet' type= 'text/css' media= 'screen and (max-width: 599px)' href= 'res/style/header-resp.css'>
+        <link rel= 'stylesheet' type= 'text/css' media= 'screen and (max-width: 599px)' href= 'res/style/contact-resp.css'>
+    </head>
+    <body>
+        <div class= 'no-space-block' id= 'page-header'>
+            <img class='icon' src= '../res/icon/icon_orig.png' />
+            <div id= 'nav'>
+                <a href= '/login'>Login</a>
+                <a href= '/reg'>Signup</a>
+            </div>
+        </div>
+        <div class= 'cont-block' id= 'page-content'>
+            <div class= 'no-space-block' id= 'form-cont'>
+                <h1>Dev Details</h1>
+                <table id= 'dev-det'>
+                    <tr id= 'nm'>
+                        <td rowspan= '2'><img id= 'dev-prof' src= '../res/images/dev.jpg'></td>
+                        <td><span>Toshit Mall</span></td>
+                    </tr>
+                    <tr id= 'em'>
+                        <td><span>toshitmall2000@gmail.com</span></td>
+                    </tr>
+                </table>
+                <h1>Send Message</h1>
+                <script src= 'res/js/dev.cont.js'></script>
+                <div id= 'feed'>
+                    <form id= '-cont'>
+                        <input type= 'email' id= '_em_' name= '_email' required placeholder= 'Email'>
+                        <input type= 'name' name= '_name' id= '_nm_' placeholder= 'Name'>
+                        <textarea name= '_msg' id= '_msg_' maxlength= "700" minlength= "20" required placeholder = 'Message min(50 characters)'></textarea>
+                        <button class= 'btn' id= '_smsg'>Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

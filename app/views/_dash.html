@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <script src= 'res/js/check.on.me.js'></script>
+        <script src= 'res/js/socket.io.dev.js'></script>
+        <title>Personal Lobby</title>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+        <meta name= 'viewport' content= 'width=device-width,initial-scale=1.0' />
+        <link rel= 'stylesheet' type= 'text/css' href= 'res/style/dash.css'>
+        <link rel= 'stylesheet' type= 'text/css' media= "screen and (max-width: 900px)" href= 'res/style/dash-resp-900.css'>
+        <link rel= 'stylesheet' type= 'text/css' media= "screen and (max-width: 600px)" href= 'res/style/dash-resp-600.css'>
+        <link rel= 'stylesheet' type= 'text/css' href= 'res/style/header.css'>
+        <link rel= 'stylesheet' type= 'text/css' media= 'screen and (max-width: 600px)' href= 'res/style/header-resp.css'>
+        <script src= 'res/js/vue.js'></script>
+        <script src= 'res/js/vcomp.js'></script>
+    </head>
+    <body>
+        <div id= 'vue-wrap'>
+            <div class= 'no-space-block' id= 'page-header'>
+                <img class='icon' src= 'res/icon/icon_orig.png' />
+                <div id= 'nav'>
+                    <a href= '/rules'>Rules</a>
+                    <a href= '/contact'>Contact</a>
+                </div>
+                <button class="btn" id="_logout">Sign out</button>
+            </div>
+            <create-lobby ref= 'croom'></create-lobby>
+            <join-lobby ref= 'jroom'></join-lobby>
+            <div class= 'cont-block' id= 'page-content'>
+                <div class= 'box-full sh'>
+                    <div class= 'info'>
+                        <div>
+                            <img src width= '96px' height= '96px'>
+                            <span id= '_name'></span>
+                        </div>
+                        <div>
+                            <p>Coins : <input type= 'number' class= 'inp' id= '_points' readonly /></p>
+                            <p>Wins : <input type= 'number' class= 'inp' id= '_gwin' readonly /></p>
+                            <p>Losses : <input type= 'number' class= 'inp' id= '_gloss' readonly /></p>
+                        </div>
+                    </div>
+                </div>
+                <div class= 'box-full box-flex'>
+                    <div class= 'box-half sh'>
+                        <p id= 'create-room'>
+                            <button class= 'btn' id= 'cr' v-on:click= 'openLobby()'>Create Room</button>
+                        </p>
+                        <span class= 'divider'></span>
+                        <p id= 'join-room'>
+                            <input type= 'text' class= 'inp' v-model= 'roomName' id= '_join_room' maxlength= '7' />
+                            <label for= '_new_room'>Room No</label>
+                            <button class= 'btn' id= 'jr' v-on:click= 'joinLobby()'>Join Room</button>
+                        </p>
+                    </div>
+                    <div class= 'box-half sh'>
+                        Friends and chat
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src= 'res/js/background.js'></script>
+    </body>
+</html>

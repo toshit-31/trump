@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title></title>
+        <link rel= 'stylesheet' type= 'text/css' href= '../res/style/field.css' />
+        <link rel= 'stylesheet' type= 'text/css' href= '../res/style/field-resp.css' />
+        <script src= '../../res/js/socket.io.dev.js'></script>
+        <script src= '../../res/js/game/game.comp.js'></script>
+        <script src= '../../res/js/game/game.client.js'></script>
+    </head>
+    <body>
+        <div id= 'playground'>
+            <div class= 'single' id= 'pl-top'>
+                <div class= '_oth _info'>
+                    <img src= '../res/avs/beardMan.webp' />
+                    <p>
+                        <span>Player 3</span>
+                        <span class= '_met'></span> 
+                    </p>
+                </div>
+                <div id= '_game-info'>
+                    <span id= 'tr'>Trump : <b>Not Selected</b></span>
+                    <span>Sets Won : <input type= 'number' value= 0 id= 'sc' readonly></span>
+                </div>
+            </div>
+            <div class = 'single flex'>
+                <div class= 'split' id= 'pl-left'>
+                    <div class= '_oth _info'>
+                        <img src= '../res/avs/beardMan.webp' />
+                        <p>
+                            <span>Player 2</span>
+                            <span class= '_met'></span>
+                        </p>
+                    </div>
+                </div>
+                <div class= 'split' id= 'cd-show'>
+                    <div id= 'card-area'>
+                        <div id= 'pl-top-card'></div>
+                        <div id= 'pl-lr-card'>
+                            <div class= '-l'></div>
+                            <div class= '-r'></div>
+                        </div>
+                        <div id= 'pl-me-card'></div>
+                    </div>
+                    <div id= 'trump-sel'>
+                    </div>
+                </div>
+                <div class= 'split' id= 'pl-right'>
+                    <div class= '_oth _info'>
+                        <img src= '../res/avs/beardMan.webp' />
+                        <p>
+                            <span>Player 4</span>
+                            <span class= '_met'></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class= 'single' id= 'pl-me'>
+                <div id= '_info'>
+                    <img src= '../res/avs/beardMan.webp' />
+                    <p>
+                        <span>Toshit</span>
+                        <span class= '_met'></span>
+                    </p>
+                    <button class= 'btn' id= '_ft'>Quit</button>
+                </div>
+                <div id= 'card-stack'>
+                </div>
+            </div>
+        </div>
+        <div id= 'vol-msg' data-head= 'Breaker' >
+        </div>
+        
+    </body>
+</html>
